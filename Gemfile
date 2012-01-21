@@ -29,9 +29,11 @@ gem 'jquery-rails'
 
 #Testing with rspec-rails
 group :development do
+   gem 'webrat' #important with rspec	//Rspec - undefined method `has_selector?' 
    gem 'rspec-rails'
 end	
 
 group :test do
+	gem 'webrat'  #important with rspec //Rspec - undefined method `has_selector?' 
 	gem 'rspec'
 end	
