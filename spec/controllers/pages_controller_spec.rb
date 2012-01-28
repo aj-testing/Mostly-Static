@@ -1,7 +1,12 @@
 require 'spec_helper'
 
 describe PagesController do
- render_views		
+ render_views
+    
+  #@base_title variable means global for this file  
+  before(:each) do
+    @base_title = "Ruby on Rails Torture"
+  end
 
   describe "GET 'home'" do
     it "returns http success" do
@@ -13,7 +18,7 @@ describe PagesController do
     it "should have the right title" do
 	  get 'home'
       response.should have_selector("title",
-           :content => "Ruby on Rails Torture | Home")	
+           :content => "#{@base_title} | Home")	
     end
     
     it "should have a non-blank body" do
