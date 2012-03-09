@@ -29,6 +29,10 @@ gem 'jquery-rails'
 
 #Testing with rspec-rails
 group :development do
+   # gem 'annotate_models' -> this is fucking gonner
+   # gem 'annotate' -> don't work
+   # run in command bundle exec annotate
+   gem 'annotate', '~> 2.4.1.beta' #for the error occuring a beta patch
    gem 'webrat' #important with rspec	//Rspec - undefined method `has_selector?' 
    gem 'rspec-rails'
 end	
